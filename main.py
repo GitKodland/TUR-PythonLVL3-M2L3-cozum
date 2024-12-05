@@ -25,25 +25,25 @@ async def send_question(ctx_or_interaction, user_id):
 
 @bot.event
 async def on_ready():
-    print(f'New login: {bot.user}!')
+    print(f'Yeni giriş: {bot.user}!')
 
 
 @bot.event
 async def on_interaction(interaction):
     user_id = interaction.user.id
     if user_id not in user_responses:
-        await interaction.response.send_message("Please start the quiz by typing the !start command")
+        await interaction.response.send_message("Lütfen !start komutunu yazarak sınavı başlatın.")
         return
 
     custom_id = interaction.data["custom_id"]
     if custom_id.startswith("correct"):
-        await interaction.response.send_message("Correct answer!")
+        await interaction.response.send_message("Doğru cevap!")
     elif custom_id.startswith("wrong"):
-        await interaction.response.send_message("Wrong answer!")
+        await interaction.response.send_message("Yanlış cevap!")
 
     user_responses[user_id] += 1
     if user_responses[user_id] > len(quiz_questions) - 1:
-        await interaction.followup.send("That sums up the quiz!")
+        await interaction.followup.send("İşte, sınavın özeti!")
     else:
         await send_question(interaction, user_id)
 
