@@ -22,7 +22,7 @@ class Question:
 
 
 quiz_questions = [
-   Question("What do cats do when nobody sees them?", 1, "Sleep", "Write memes"),
-   Question("How do cats express their love?", 0, "Loud purring", "Lovaely photos", "Barking"),
-   Question("What books do cats like to read?", 3, "Self-help books", "Time management: how to sleep 18 hours a day", "101 ways to go to sleep 5 minutes earlier than your owner", "A guide to human management")
+   Question("Kimse onları görmediğinde kediler ne yapar?", 1, "Uyumak", "Mizah yapmak"),
+   Question("Kediler sevgilerini nasıl ifade ederler?", 0, "Yüksek sesli mırlama", "Harika pozlar", "Havlama"),
+   Question("Kediler hangi kitapları okumaktan hoşlanır?", 3, "Kişisel gelişim kitapları", "Zaman yönetimi: günde 18 saat nasıl uyunur", "Sahibinizden 5 dakika önce uyumanın 101 yolu”, ”İnsan yönetimi için bir rehber")
 ]
